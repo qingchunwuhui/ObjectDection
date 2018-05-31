@@ -1,5 +1,9 @@
-cmake_minimum_required(VERSION 3.0.0)
-Project(objectDetection)
+cmake_minimum_required(VERSION 3.2.0)
+
+PROJECT(ObjectDetection)
+
+# 设置添加当前路径
+# Set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 if(MSVC)
 	option(OpenCV_Static "Use static OpenCV libraries" OFF)
@@ -16,5 +20,9 @@ add_executable(opencv_haar_boosted
 ${SRC_FILE}
 ${HEAD_FILE})
 
-target_link_libraries(opencv_haar_boosted ${OpenCV_LIBS})
+set_target_properties(opencv_haar_boosted PROPERTIES LINKER_LANGUAGE CXX)
+
+TARGET_LINK_LIBRARIES(opencv_haar_boosted ${OpenCV_LIBS})
+
+
 

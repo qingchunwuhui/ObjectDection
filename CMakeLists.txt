@@ -11,3 +11,4 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 add_subdirectory(./imagewatch_in_visualStudio)
 add_subdirectory(./opencv-haar-boosted)
+add_subdirectory(./traincascade)

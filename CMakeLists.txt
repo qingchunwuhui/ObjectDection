@@ -1,23 +1,14 @@
 cmake_minimum_required(VERSION 3.2.0)
 
-PROJECT(ObjectDetection)
+project( Object_Detection )
 
-# 设置添加当前路径
-# Set(CMAKE_INCLUDE_CURRENT_DIR ON)
+find_package( OpenCV REQUIRED )
+find_package( OpenGL )
 
-if(MSVC)
-	option(OpenCV_Static "Use static OpenCV libraries" OFF)
-endif()
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-find_package(OpenCV REQUIRED)
-
-include_directories(. ${OpenCV_INCLUDE_DIRS})
-
-ADD_SUBDIRECTORY(./opencv-haar-boosted)
-ADD_SUBDIRECTORY(./imagewatch_in_visualStudio)
-ADD_SUBDIRECTORY(./opencv-HOG-SVM)
-
-
-
+add_subdirectory(./imagewatch_in_visualStudio)
+add_subdirectory(./opencv-haar-boosted)
+add_subdirectory(./traincascade)

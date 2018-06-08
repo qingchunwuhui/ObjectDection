@@ -1,0 +1,2 @@
+
+dir /b > pos.dat                                                  

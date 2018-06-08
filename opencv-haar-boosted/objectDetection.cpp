@@ -63,8 +63,8 @@ void detectAndDisplay( Mat frame )
     std::vector<Rect> faces;
     Mat frame_gray;
 
-    cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
-    equalizeHist( frame_gray, frame_gray );
+    cvtColor( frame, frame_gray, COLOR_BGR2GRAY );		//转化为灰度图（灰度分为256阶）
+    equalizeHist( frame_gray, frame_gray );				//直方图均值化
 
     //-- Detect faces
     face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(60, 60) );

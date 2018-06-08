@@ -29,7 +29,8 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		cout << "Wrong number of parameters" << endl;
+		cout << "Wrong number of parameters" << endl; 
+
 		return -1;
 	}
 
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
 	cout << "Detecting edges in input image" << endl;
 	Mat edges;
 	Canny(input, edges, 10, 100);
+
 
 	return 0;
 }

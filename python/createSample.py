@@ -1,4 +1,5 @@
 import os
+import sys
 
 def createPosSample():
     files = os.listdir("E:\\VS Programming\\Object Detection\\opencv_barr_boosted\\ObjectDection\\traincascade\\pos_image")

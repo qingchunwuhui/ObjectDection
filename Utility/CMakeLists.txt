@@ -1,0 +1,3 @@
+add_subdirectory(./imagewatch_in_visualStudio)
+
+set_target_properties(ImageWatch_visualStudio PROPERTIES FOLDER Utility)

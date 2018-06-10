@@ -5,10 +5,12 @@ project( Object_Detection )
 find_package( OpenCV REQUIRED )
 find_package( OpenGL )
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-add_subdirectory(./imagewatch_in_visualStudio)
-add_subdirectory(./opencv-haar-boosted)
-add_subdirectory(./opencv-HOG-SVM)
+add_subdirectory(./Utility)
+add_subdirectory(./Haar-AdaBoosting)
+add_subdirectory(./HOG-SVM)

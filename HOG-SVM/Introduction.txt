@@ -1,0 +1,5 @@
+1、opencv-HOG-SVM参考了https://blog.csdn.net/qianqing13579/article/details/46509037（HOG+SVM行人检测的两种方法）
+
+2、tain_HOG是opencv中自带的例子；
+
+3、HOG特征点可视化函数，参考了http://livezingy.com/hogdescriptor-in-opencv3-1/；
